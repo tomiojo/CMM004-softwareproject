@@ -1,0 +1,65 @@
+.form-Signup{
+    font-style: normal;
+    position:absolute;
+    margin:0;
+    padding:0;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
+
+.form-Signup H1{
+    outline:none;
+    font-size: 40px;
+    Padding: 17px 10px;
+    margin: 15px 0;
+    text-transform: uppercase; 
+
+}
+.form-Signup input{
+    width:100%;
+    font-size: 17px;
+    Padding: 20px 10px;
+    outline:none;
+    border-radius: 10px;
+}
+.form-Signup button{
+    width:50%;
+    font-size: 17px;
+    Margin:25px;
+    font-weight: bold;
+    Padding:15px 10px;
+}
+.form2{
+    font-style: normal;
+    position:absolute;
+    margin:0;
+    padding:0;
+    left: 40%;
+}
+.form2 input{
+    width:100%;
+    font-size: 10px;
+    Padding: 20px 10px;
+    outline:none;
+    border-radius: 10px;
+}
+.form2 button{
+    width:50%;
+    font-size: 17px;
+    Margin:25px;
+    font-weight: bold;
+    Padding:15px 10px;
+}
+
+#Category{
+    outline:none;
+    font-size: 15px;
+    Padding: 10px 17px;
+    margin: 15px 0;
+}
+.Business Category{
+    font-size: 20px;
+    font-style: oblique;
+
+}

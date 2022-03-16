@@ -31,6 +31,14 @@ nav {
     background-size: cover;
     height: 85vh;
 }
+#hero2{
+    background-image: url("./Asset/hero2.png");
+    background-repeat: no-repeat;
+    background-blend-mode: hue;
+    background-size: cover;
+    height: 85vh;
+}
+
 .section-title {
     text-align: center;
     font-size: 40px;
@@ -111,15 +119,14 @@ margin: auto;
 }
 .carousel-item{
     position: relative;
-    height: auto
-    widith: 100%
+    height: auto;
+    widith: 100%;
 }
 .carousel-item>img{
     border-radius: 50%;
     padding: 40px;
     width: 30%;
-    margin-top: 50px;
-    
+    margin-top: 50px; 
 }
 #grey-footer {
     background-color: #16161a;
@@ -134,5 +141,82 @@ margin: auto;
     padding: 10px;
     text-align: center;
 }
+.form-login{
+    font-style: normal;
+    position:absolute;
+    margin:0;
+    padding:0;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+}
 
+.form-login H1{
+    outline:none;
+    font-size: 40px;
+    Padding: 17px 10px;
+    margin: 15px 0;
+    text-transform: uppercase; 
 
+}
+.form-login input{
+    width:100%;
+    font-size: 17px;
+    Padding: 20px 10px;
+    outline:none;
+    border-radius: 10px;
+}
+.form-login button{
+    width:50%;
+    font-size: 17px;
+    Margin:25px;
+    font-weight: bold;
+    Padding:15px 10px;
+}
+
+#myCarousel .carousel-item{
+    position: relative;
+    height: 32rem;
+    background-color: white ;
+    widith: 30%
+}
+
+#myCarousel .container{
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    right: 0;
+   padding-bottom: 50px;
+   color: rgb(212, 212, 205);
+}
+
+#myCarousel .carousel-item>img{
+    border-radius: 0%;
+   position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background: cover;
+    opacity: 0.7;
+    
+}
+
+#ContactForm .container {
+    position: center;
+    bottom: 50px;
+    left: 100px;
+    right: 100px;
+    top: 0;
+    padding-left: 100px;
+}
+
+#teamimage {
+    position: center;
+    justify-content: center;
+    height: 25rem;
+    width: auto;
+    padding-left: 28%;
+    opacity: 0.8; 
+} 
