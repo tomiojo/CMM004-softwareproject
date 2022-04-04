@@ -18,7 +18,7 @@
       </div>
       <div class="navbar-items">
         <a href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
+        <a href="directory.php">Directory</a>
         <a href="aboutus.html">Our team</a>
         <a href="contact.php">Contact us</a>
         <a href="signup.html">
@@ -37,7 +37,7 @@
 <main>
     <!--CONTACT FORM STARTS-->
             <!--(CodingNepal, 2021), (contributors, n.d.), (W3schools, 2019)-->
-            <h1 id="text0">We love to hear from you!</h1>
+            <h1>We love to hear from you!</h1>
             <div class="form-center">
             <div class="wrapper">
                <form action="./message.php">

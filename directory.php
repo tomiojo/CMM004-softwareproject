@@ -1,3 +1,7 @@
+<?php 
+session_start();
+?>
+
 <!DOCTYPE html>    
 <html lang="eng">
 <head>
@@ -20,7 +24,7 @@
     </div>
     <div class="navbar-items">
         <a href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
+        <a href="directory.php">Directory</a>
         <a href="aboutus.html">Our team</a>
         <a href="contact.php">Contact us</a>
         <button class="button cart-button"> Sign up </button>
@@ -41,12 +45,64 @@
     </div>
     <br>
     <!--Search bar-->
+    <!--(HTML Table Styling n.d.)-->
+    <!--(CodeFlix, n.d.)-->
     <div id="searchbar" class="text-center">
-      <form>
+      <form method="post" >
         <input type="text" name="search" size="50">
-        <input type="submit" value="Go">
+        <input type="submit" name="submit" value="Go">
       </form>
     </div>
+
+    <?php
+    $db = new PDO("mysql:host=localhost;dbname=marvel",'root','');
+
+if (isset($_POST["submit"])) {
+	$str = $_POST["search"];
+	$sth = $db->prepare("SELECT * FROM `searchbar` WHERE ser_cat = '$str'");
+
+	$sth->setFetchMode(PDO:: FETCH_OBJ);
+	$sth -> execute();
+
+	if($row = $sth->fetch())
+	{
+		?>
+		<br><br><br>
+    <div>
+		<table class="text-center">
+			<tr>
+				<th>Category</th>
+				<th>Business Name</th>
+			</tr>
+			<tr>
+				<td><?php echo $row->ser_cat; ?></td>
+				<td><?php echo $row->bus_name; ?></td>
+			</tr>
+		</table>
+    <!--(www.w3schools.com, n.d.)-->
+    <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #DDD;
+    }
+    
+    tr:hover {background-color: #D6EEEE;}
+    </style>
+    </div>
+<?php 
+	}	
+		else{
+			echo "Category does not exist";
+		}
+}
+?>
+
 <!--Carousel Starts-->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -65,8 +121,7 @@
         <img src="./Asset/carousel/barber2.jpg" class="d-block w-100" alt="Barber">
           <div class="container">
             <div class="text-center">
-              <h2 >Barber</h2>
-
+            <a href="./barber.php" class="btn btn-dark"><h2 >Barber</h2></a>
             </div>
           </div>
         </div>
@@ -75,7 +130,7 @@
           <img src="./Asset/carousel/gadgetstore4.jpg" class="d-block w-100" alt="Gadget store">
             <div class="container">
                 <div class="text-center">
-                  <h2>Gadget stores</h2>
+                <a href="./gadgetstores.php" class="btn btn-dark"><h2>Gadget stores</h2></a>
                 </div>
             </div>
         </div>
@@ -84,7 +139,7 @@
           <img src="./Asset/carousel/groceries.jpg" class="d-block w-100" alt="Groceries">
             <div class="container">
               <div class="text-center">
-                <h2>Groceries</h2>
+              <a href="./groceries.php" class="btn btn-dark"><h2>Groceries</h2></a>
               </div>       
             </div>
         </div>
@@ -93,7 +148,7 @@
           <img src="./Asset/carousel/charity shops near me.jpg" class="d-block w-100"  alt="Charity-shops">
             <div class="container">
               <div class="text-center">
-               <h2>Charity shop</h2>
+              <a href="./charityshop.php" class="btn btn-dark"><h2>Charity shop</h2></a>
              </div>
             </div> 
         </div>
@@ -102,7 +157,7 @@
           <img src="./Asset/health care.jpg" class="d-block w-100" alt="Healthcare">
             <div class="container">
               <div class="text-center">
-                <h2>Healthcare</h2>
+              <a href="./healthcare.php" class="btn btn-dark"><h2>Healthcare</h2></a>
               </div>
             </div>
         </div>
@@ -111,7 +166,7 @@
           <img src="./Asset/carousel/Mechanic.jpg" class="d-block w-100" alt="Mechanic">
             <div class="container">
               <div class="text-center">
-                <h2>Mechanic</h2>
+              <a href="./mechanic.php" class="btn btn-dark"><h2>Mechanic</h2></a>
               </div>
             </div>  
         </div>
