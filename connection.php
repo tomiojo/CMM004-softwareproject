@@ -1,14 +1,12 @@
 <?php
-// Setting up the variables.
-$servername = "localhost";
-$dbname= "marvel";
-$usr = "root";
-$password = "";
 
-// Creating the connection
-$db = mysqli_connect($servername, $usr, $password, $dbname);
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "logindb";
 
-// Checking the connection
-if (!$db) {
-    die("Connection failed: " . mysqli_connect_error());
+if(!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname));
+{
+
+	die("Connection to DB failed!" .mysqli_connect_error());
 }
