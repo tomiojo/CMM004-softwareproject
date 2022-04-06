@@ -59,12 +59,15 @@ session_start();
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
-	$sth = $db->prepare("SELECT * FROM business WHERE ser_cat='$str'");
+	//$sth = $db->prepare("SELECT * FROM business WHERE ser_cat='$str'");
+  $sql="SELECT * FROM marvel WHERE ser_cat='$str'";
+  $result=$conn->query($sql);
 
-	$sth->setFetchMode(PDO:: FETCH_OBJ);
-	$sth -> execute();
+	//$sth->setFetchMode(PDO:: FETCH_OBJ);
+	//$sth -> execute();
 
-	if($row = $sth->fetch())
+	//if($row = $sth->fetch())
+  if($result->num_rows>0)
 	{
 		?>
 		<br><br><br>
