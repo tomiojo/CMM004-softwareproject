@@ -44,7 +44,7 @@ session_start();
         <div class ="form-Signup">
             <h1> Signup Here </h1>
             <form id="signupform">
-            <form method= 'Post'>
+            <form action= "signup.php" method= 'Post'>
                 <h3>Email Address</h3>
                 <Input type='text' name='email' placeholder="johndoe@email.com">
                     <h3>Password</h3>
