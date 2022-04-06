@@ -86,6 +86,14 @@ if (isset($_POST["submit"])) {
         <td><?php echo $row->pho_num; ?></td>
         <td><?php echo $row->web; ?></td>
 			</tr>
+      <tr>
+				<td><?php echo $row->ser_cat; ?></td>
+				<td><?php echo $row->bus_nme; ?></td>
+        <td><?php echo $row->e_mail; ?></td>
+        <td><?php echo $row->bus_site; ?></td>
+        <td><?php echo $row->pho_num; ?></td>
+        <td><?php echo $row->web; ?></td>
+			</tr>
 		</table>
     <!--(www.w3schools.com, n.d.)-->
     <style>
