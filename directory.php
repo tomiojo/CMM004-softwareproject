@@ -64,7 +64,7 @@ if (isset($_POST["submit"])) {
 	$sth->setFetchMode(PDO:: FETCH_OBJ);
 	$sth -> execute();
 
-	if($row = $sth->fetch())
+	while($row = $sth->fetch())
 	{
 		?>
 		<br><br><br>
@@ -106,9 +106,7 @@ if (isset($_POST["submit"])) {
     </div>
 <?php 
 	}	
-		else{
-			echo "Category does not exist";
-		}
+		
 }
 ?>
 
