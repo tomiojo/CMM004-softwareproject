@@ -61,6 +61,9 @@ if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
 	//$sth = $db->prepare("SELECT * FROM business WHERE ser_cat='$str'");
   $sql="SELECT * FROM marvel WHERE ser_cat='$str'";
+  $sql->setFetchMode(PDO:: FETCH_OBJ);
+  $sql -> execute();
+
   $result=$conn->query($sql);
 
 	//$sth->setFetchMode(PDO:: FETCH_OBJ);
@@ -69,27 +72,28 @@ if (isset($_POST["submit"])) {
 	//if($row = $sth->fetch())
   if($result->num_rows>0)
 	{
-		?>
-		<br><br><br>
-    <div>
-		<table class="text-center">
-			<tr>
-				<th>Category</th>
-				<th>Business Name</th>
-        <th>Email</th>
-        <th>Address</th>
-        <th>Telephone</th>
-        <th>Website</th>
-			</tr>
-			<tr>
-				<td><?php echo $row->ser_cat; ?></td>
-				<td><?php echo $row->bus_nme; ?></td>
-        <td><?php echo $row->e_mail; ?></td>
-        <td><?php echo $row->bus_site; ?></td>
-        <td><?php echo $row->pho_num; ?></td>
-        <td><?php echo $row->web; ?></td>
-			</tr>
-		</table>
+    while($row=$result->fetch_assoc()){
+      ?>
+		  <br><br><br>
+      <div>
+	  	<table class="text-center">
+			  <tr>
+				  <th>Category</th>
+				  <th>Business Name</th>
+          <th>Email</th>
+          <th>Address</th>
+          <th>Telephone</th>
+          <th>Website</th>
+			  </tr>
+			  <tr>
+				  <td><?php echo $row->ser_cat; ?></td>
+				  <td><?php echo $row->bus_nme; ?></td>
+          <td><?php echo $row->e_mail; ?></td>
+          <td><?php echo $row->bus_site; ?></td>
+          <td><?php echo $row->pho_num; ?></td>
+          <td><?php echo $row->web; ?></td>
+			  </tr>
+		  </table>
     <!--(www.w3schools.com, n.d.)-->
     <style>
     table {
@@ -106,7 +110,7 @@ if (isset($_POST["submit"])) {
     tr:hover {background-color: #D6EEEE;}
     </style>
     </div>
-<?php 
+    <?php 
 	}	
 		else{
 			echo "Category does not exist";
