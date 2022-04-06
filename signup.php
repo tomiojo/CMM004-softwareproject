@@ -14,12 +14,11 @@ session_start();
 
 		if(!empty($email) && !empty($password) && !empty($telephone))
 		{
-			$user_id = random_num(20);
-			$query = "insert into users (user_id,email,password,telephone) values ('$user_id','$email','$password','$telephone')";
+			$query = "INSERT INTO users ('uid', 'mail', 'pass', 'tel') VALUES ('0', '$email','$password','$telephone')";
 
 			mysqli_query($con, $query);
 
-			//header("Location: login.php");
+			header("Location: login.php");
 			//die;
 		}else
 		{
