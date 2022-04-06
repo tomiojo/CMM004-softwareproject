@@ -59,7 +59,7 @@ session_start();
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
-	$sth = $db->prepare("SELECT * FROM `business` WHERE ser_cat = '$str'");
+	$sth = $db->prepare("SELECT * FROM business WHERE ser_cat='$str'");
 
 	$sth->setFetchMode(PDO:: FETCH_OBJ);
 	$sth -> execute();
@@ -79,14 +79,6 @@ if (isset($_POST["submit"])) {
         <th>Website</th>
 			</tr>
 			<tr>
-				<td><?php echo $row->ser_cat; ?></td>
-				<td><?php echo $row->bus_nme; ?></td>
-        <td><?php echo $row->e_mail; ?></td>
-        <td><?php echo $row->bus_site; ?></td>
-        <td><?php echo $row->pho_num; ?></td>
-        <td><?php echo $row->web; ?></td>
-			</tr>
-      <tr>
 				<td><?php echo $row->ser_cat; ?></td>
 				<td><?php echo $row->bus_nme; ?></td>
         <td><?php echo $row->e_mail; ?></td>
