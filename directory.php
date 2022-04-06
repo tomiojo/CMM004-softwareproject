@@ -55,11 +55,11 @@ session_start();
     </div>
 
     <?php
-    $db = new PDO("mysql:host=localhost;dbname=marvel",'root','');
+    $db = new PDO("mysql:host=localhost;dbname=marvel",'root','root');
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
-	$sth = $db->prepare("SELECT * FROM `searchbar` WHERE ser_cat = '$str'");
+	$sth = $db->prepare("SELECT * FROM `business` WHERE ser_cat = '$str'");
 
 	$sth->setFetchMode(PDO:: FETCH_OBJ);
 	$sth -> execute();
@@ -73,10 +73,18 @@ if (isset($_POST["submit"])) {
 			<tr>
 				<th>Category</th>
 				<th>Business Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Telephone</th>
+        <th>Website</th>
 			</tr>
 			<tr>
 				<td><?php echo $row->ser_cat; ?></td>
-				<td><?php echo $row->bus_name; ?></td>
+				<td><?php echo $row->bus_nme; ?></td>
+        <td><?php echo $row->e_mail; ?></td>
+        <td><?php echo $row->bus_site; ?></td>
+        <td><?php echo $row->pho_num; ?></td>
+        <td><?php echo $row->web; ?></td>
 			</tr>
 		</table>
     <!--(www.w3schools.com, n.d.)-->
