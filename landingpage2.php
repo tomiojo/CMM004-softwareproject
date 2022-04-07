@@ -54,15 +54,10 @@ session_start();
                 <Input type='text' name='address' placeholder="Address">
                     <h3>Postal Code </h3>
                     <Input type='text' name='postal_code' placeholder="Postal code">
-                    <h3>Is your business registered? </h3>
-                <Input type='radio' id="yes" name="yes" Value ="yes">
-                    <label for="Yes">YES</label>
-                <Input type='radio' id="No" name="No" Value ="No"> 
-                        <label for="No">NO</label>
                         <br><br>
                         <h3>Choose your business Category </h3>
                         <label form="Category"></label>
-                        <select name="Business Category" id="Category">
+                        <select name="business_category" id="Category">
                           <option value="Barber">Barber</option>
                           <option value="Groceries">Groceries</option>
                           <option value="Healthcare">Healthcare</option>
