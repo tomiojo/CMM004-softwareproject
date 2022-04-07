@@ -48,7 +48,7 @@ mysqli_stmt_close($stmt);
 }
 
 function createUser($con,$email,$password,$telephone){
-	$sql = "INSERT INTO users(mail, pass, tel) VALUES (?,?,?);";
+	$sql = "INSERT INTO users(email, password, telephone) VALUES (?,?,?);";
 	$stmt = mysqli_stmt_init($con);
 	if(!mysqli_stmt_prepare($stmt,$sql)){
 		header("location: signup.php?error=failed");

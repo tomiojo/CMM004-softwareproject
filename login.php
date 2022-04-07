@@ -15,7 +15,7 @@ session_start();
 		if(!empty($email) && !empty($password))
 		{
 
-			$query = "SELECT * FROM users WHERE mail = '$email' limit 1";
+			$query = "SELECT * FROM users WHERE email = '$email' limit 1";
 			$result = mysqli_query($con, $query);
 
 			if($result)
@@ -56,7 +56,7 @@ session_start();
         <h1> Login Here </h1>
             <form action ='login.php'method= 'Post'>
                 <h3>Email Address</h3>
-                <Input type='mail' name='email' placeholder="johndoe@email.com">
+                <Input type='email' name='email' placeholder="johndoe@email.com">
                     <h3>Password</h3>
                 <Input type='password' name='password' placeholder="Password">
                     <br><br>
