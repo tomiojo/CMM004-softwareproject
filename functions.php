@@ -83,7 +83,7 @@ function check_login($con)
 		}
 	}
 	
-	header("Location: loginsan.php");
+	header("Location: login.php");
 	exit();
 
 }
