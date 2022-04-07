@@ -23,7 +23,7 @@ return $result;
 }
 
 function existingemail($con,$email){
-	$sql = "SELECT*FROM users WHERE mail=?;";
+	$sql = "SELECT*FROM users WHERE email=?;";
 	$stmt = mysqli_stmt_init($con);
 	if(!mysqli_stmt_prepare($stmt,$sql)){
 		header("location: signup.php?error=failed");
