@@ -2,11 +2,11 @@
 
 session_start();
 
-if(isset($_SESSION['uid']))
+if(isset($_SESSION['user_id']))
 {
-	unset($_SESSION['uid']);
+	unset($_SESSION['user_id']);
 
 }
 
-header("Location: login.php");
+header("Location: thankyou.php");
 die;
