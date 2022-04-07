@@ -18,7 +18,7 @@ session_start();
     <header>
         <nav>
             <div>
-                <h1>Hello, email </h1>
+                <h1> Welcome! </h1>
             </div>
             <div class="flex align-items-center">
                 <img src="./Asset/Marvel business logo_ccexpress.png" alt="brand-logo"/>
@@ -75,7 +75,7 @@ session_start();
                     <h3>Website</h3>
                 <Input type='text' name='website' placeholder="www.website.com">
                     <br><br>
-                    <button type="submit"> Submit </button>
+                    <button type="submit" name="submit"> Submit </button>
             </form>
         </div>
 

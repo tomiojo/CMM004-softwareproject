@@ -58,7 +58,7 @@ session_start();
                 <h3>Email Address</h3>
                 <Input type='text' name='email' placeholder="johndoe@email.com">
                     <h3>Password</h3>
-                <Input type='password' name='Password' placeholder="Password">
+                <Input type='password' name='password' placeholder="Password">
                     <br><br>
                     <button type="submit"> Login </button>
                 </div>

@@ -1,32 +1,3 @@
-<?php 
-session_start();
-
-	include("connection.php");
-	include("functions.php");
-
-
-	if($_SERVER['REQUEST_METHOD'] == "POST")
-	{
-		
-		$email = $_POST['email'];
-		$password = $_POST['password'];
-        $telephone = $_POST['telephone'];
-
-		if(!empty($email) && !empty($password) && !empty($telephone))
-		{
-			$query = "INSERT INTO users ('uid', 'mail', 'pass', 'tel') VALUES ('0', '$email','$password','$telephone')";
-
-			mysqli_query($con, $query);
-
-			header("Location: login.php");
-			//die;
-		}else
-		{
-			echo "Please enter valid details!";
-		}
-	}
-?>
-
 
 <!DOCTYPE html>
 <html lang="eng">
@@ -43,8 +14,7 @@ session_start();
     <body>
         <div class ="form-Signup">
             <h1> Signup Here </h1>
-            <form id="signupform">
-            <form action= "signup.php" method= 'Post'>
+            <form action="signupbe.php" method= 'POST' id="signupform">
                 <h3>Email Address</h3>
                 <Input type='text' name='email' placeholder="johndoe@email.com">
                     <h3>Password</h3>
@@ -52,7 +22,7 @@ session_start();
                     <h3>Telephone number</h3>
                 <Input type='text' name='telephone' placeholder="Telephone">
                     <br><br>
-                    <button type="submit"> Submit </button>
+                    <button type="submit" name="submit"> Submit </button>
             </form>
         </div>
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -60,5 +30,27 @@ session_start();
         <script src="signup.js"></script>
         
     </body>
- 
+
+    <?php
+    if(isset ($_GET["error"])){
+        if($_GET["error"]=="emptyinput"){
+            echo "<p>Empty fields</p>" ;
+        }
+        else if($_GET["error"]=="invalidemail"){
+                echo "<p>Enter a valid email </p>" ;
+
+        }
+        else if($_GET["error"]=="stmtfailed"){
+            echo "<p>Please try again </p>" ;
+
+        }
+        else if($_GET["error"]=="emailtaken"){
+            echo "<p> Email already exist </p>" ;
+        }
+    }
+    ?>
+
 </html>
+    
+
+    
