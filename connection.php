@@ -2,8 +2,8 @@
 
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "";
-$dbname = "logindb";
+$dbpass = "root";
+$dbname = "marvel";
 
 $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
