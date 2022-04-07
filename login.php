@@ -15,7 +15,7 @@ session_start();
 		if(!empty($email) && !empty($password))
 		{
 
-			$query = "select * from users where email = '$email' limit 1";
+			$query = "SELECT * FROM users WHERE mail = '$email' limit 1";
 			$result = mysqli_query($con, $query);
 
 			if($result)
@@ -28,7 +28,7 @@ session_start();
 					if($user_data['password'] === $password)
 					{
 
-						$_SESSION['user_id'] = $user_data['user_id'];
+						$_SESSION['uid'] = $user_data['uid'];
 						header("Location: landingpage2.php");
 						die;
 					}
