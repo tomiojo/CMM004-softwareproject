@@ -28,7 +28,7 @@ session_start();
 					if($user_data['password'] === $password)
 					{
 
-						$_SESSION['uid'] = $user_data['uid'];
+						$_SESSION['user_id'] = $user_data['user_id'];
 						header("Location: landingpage2.php");
 						die;
 					}
@@ -54,9 +54,9 @@ session_start();
 <body>
     <div class ="form-login">
         <h1> Login Here </h1>
-            <form action ='loginsan.php'method= 'Post'>
+            <form action ='login.php'method= 'Post'>
                 <h3>Email Address</h3>
-                <Input type='text' name='email' placeholder="johndoe@email.com">
+                <Input type='mail' name='email' placeholder="johndoe@email.com">
                     <h3>Password</h3>
                 <Input type='password' name='password' placeholder="Password">
                     <br><br>
