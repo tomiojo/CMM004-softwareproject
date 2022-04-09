@@ -1,4 +1,6 @@
 <?php
+	require 'connection.php';
+
 	$business_name = $_POST['business_name'];
 	$email = $_POST['email'];
 	$address = $_POST['address'];
@@ -7,18 +9,11 @@
 	$telephone = $_POST['telephone'];
 	$website = $_POST['website'];
 
-	// Database connection
-	$conn = new mysqli('localhost','root','root','marvel');
-	if($conn->connect_error){
-		echo "$conn->connect_error";
-		die("Connection Failed: ". $conn->connect_error);
-	} else {
-		$stmt = $conn->prepare("insert into business(bus_nme, e_mail, bus_site, pst_cd, ser_cat, pho_num, web) values(?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssssssi", $business_name, $email, $address, $postal_code, $business_category, $telephone, $website);
-		$execval = $stmt->execute();
-		echo $execval;
-		echo "Registration successfully...";
-		$stmt->close();
-		$conn->close();
-	}
+	$stmt = $con->prepare("insert into business(bus_nme, e_mail, bus_site, pst_cd, ser_cat, pho_num, web) values(?, ?, ?, ?, ?, ?, ?)");
+	$stmt->bind_param("sssssss", $business_name, $email, $address, $postal_code, $business_category, $telephone, $website);
+	$execval = $stmt->execute();
+	echo "Registration successfully...";
+	$stmt->close();
+	$con->close();
+	
 ?>

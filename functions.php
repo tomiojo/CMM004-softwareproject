@@ -53,16 +53,23 @@ function createUser($con,$email,$password,$telephone){
 	if(!mysqli_stmt_prepare($stmt,$sql)){
 		header("location: signup.php?error=failed");
         exit();
-}
+	}
+
 print $sql;
 
-$hashedpwd = password_hash($password, PASSWORD_DEFAULT);
+$hashedpwd = sha1($password);
+//$hashedpwd = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt,"sss",$email,$hashedpwd,$telephone);
-    mysqli_stmt_execute($stmt);
+   mysqli_stmt_bind_param($stmt,"sss",$email,$hashedpwd,$telephone);
+    
+	if(!mysqli_stmt_execute($stmt)) {
+		header("location: signup.php?error=failed");
+		exit();
+	}
+	
     mysqli_stmt_close($stmt);
 	header("location: login.php?error=none");
-        exit();
+    exit();
     
 }
 
