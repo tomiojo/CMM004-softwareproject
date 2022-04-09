@@ -55,7 +55,7 @@ session_start();
     </div>
 
     <?php
-    $db = new PDO("mysql:host=localhost;dbname=marvel1",'root','root');
+    $db = new PDO("mysql:host=localhost;dbname=marvel",'root','root');
 
 if (isset($_POST["submit"])) {
 	$str = $_POST["search"];
