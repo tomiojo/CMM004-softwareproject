@@ -55,8 +55,6 @@ function createUser($con,$email,$password,$telephone){
         exit();
 	}
 
-print $sql;
-
 $hashedpwd = sha1($password);
 //$hashedpwd = password_hash($password, PASSWORD_DEFAULT);
 
