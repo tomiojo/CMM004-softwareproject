@@ -3,7 +3,7 @@
 $dbhost = "localhost";
 $dbuser = "root";
 $dbpass = "root";
-$dbname = "marvel";
+$dbname = "marvel1";
 
 $con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 
