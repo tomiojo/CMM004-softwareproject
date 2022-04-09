@@ -32,6 +32,7 @@
     </body>
 
     <?php
+    print $sql;
     if(isset ($_GET["error"])){
         if($_GET["error"]=="emptyinput"){
             echo "<p>Empty fields</p>" ;

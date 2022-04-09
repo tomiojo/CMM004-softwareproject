@@ -54,6 +54,7 @@ function createUser($con,$email,$password,$telephone){
 		header("location: signup.php?error=failed");
         exit();
 }
+print $sql;
 
 $hashedpwd = password_hash($password, PASSWORD_DEFAULT);
 
@@ -82,7 +83,7 @@ function check_login($con)
 			return $user_data;
 		}
 	}
-	
+	print $sql;
 	header("Location: login.php");
 	exit();
 
