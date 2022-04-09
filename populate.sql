@@ -31,3 +31,12 @@ VALUES
 ('0', 'j.salami@rgu.ac.uk', 'jumai', '678912345'),
 ('0', 'o.ojo6@rgu.ac.uk', 'oluwatomi', '789123456'),
 ('0', 's.martinez-dominguez@rgu.ac.uk', 'sandra', '123456789');
+
+INSERT INTO category
+VALUES
+('0', 'Barber'),
+('0', 'Groceries'),
+('0', 'Healthcare'),
+('0', 'Gadgetstore'),
+('0', 'Mechanic'),
+('0', 'Charity Shop');

@@ -1,9 +1,9 @@
 CREATE TABLE users (
-    uid int (11) NOT NULL AUTO_INCREMENT,
-    mail varchar (40),
-    pass varchar (40),
-    tel varchar (15),
-    PRIMARY KEY (uid)
+    user_id int (11) NOT NULL AUTO_INCREMENT,
+    email varchar (40),
+    password varchar (40),
+    telephone varchar (15),
+    PRIMARY KEY (user_id)
     );
 
 CREATE TABLE business(
