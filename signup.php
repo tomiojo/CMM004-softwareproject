@@ -48,8 +48,6 @@
             echo "<p> Email already exist </p>" ;
         }
     }
-
-    print $sql
     ?>
 
 </html>
