@@ -62,7 +62,7 @@
                </form>
              </div>
             </div>
-             <script src="scriptcontactform.js"></script>
+             <!--<script src="scriptcontactform.js"></script>-->
 </main>
 <!--Start of Footer-->
 <br>
