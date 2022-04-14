@@ -25,7 +25,7 @@ session_start();
             </div>
             <div class="navbar-items">
                 <a href="index.html">Home</a>
-                <a href="directory.html">Directory</a>
+                <a href="directory.php">Directory</a>
                 <a href="aboutus.html">Our team</a>
                 <a href="contact_MAC.php">Contact us</a>
                 <a href="signup.php">
