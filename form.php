@@ -29,9 +29,13 @@ if( empty($errors))
 	$headers = "From: $myemail\n"; 
 	$headers .= "Reply-To: $email_address";
 	
-	mail($to,$email_subject,$email_body,$headers);
+	if (mail($to,$email_subject,$email_body,$headers)){
+        echo "Your message has been sent";
+    } else {
+        echo "Sorry, failed to send your message!";
+    }
 	//redirect to the 'thank you' page
-	header('Location: index.html');
+	header('Location: thankyou.html');
 } 
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
