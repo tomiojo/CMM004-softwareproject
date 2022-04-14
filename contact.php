@@ -21,10 +21,10 @@
         <a href="directory.php">Directory</a>
         <a href="aboutus.html">Our team</a>
         <a href="contact.php">Contact us</a>
-        <a href="signup.html">
+        <a href="signup.php">
             <button> Sign up </button>   
         </a>
-        <a href="login.html">
+        <a href="login.php">
         <button> Login </button>
         </a>
        </div>
