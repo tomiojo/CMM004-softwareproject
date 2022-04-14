@@ -23,7 +23,7 @@ if( empty($errors))
 {
 	$to = $myemail; 
 	$email_subject = "Contact form submission: $email_address";
-	$email_body = "You have received a new message. " \n
+	$email_body = "You have received a new message. " .
 	" Here are the details:\n Name: $name \n Email: $email_address \n Message: $message"; 
 	
 	$headers = "From: $myemail\n"; 
