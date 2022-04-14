@@ -25,7 +25,7 @@
             <button> Sign up </button>   
         </a>
         <a href="login.html">
-        <button> login </button>
+        <button> Login </button>
         </a>
        </div>
     </nav>
@@ -40,7 +40,7 @@
             <h1>We love to hear from you!</h1>
             <div class="form-center">
             <div class="wrapper">
-               <form action="./form.php">
+               <form action="form.php">
                  <div class="dbl-field">
                    <div class="field">
                      <input type="text" name="name" placeholder="Enter your name">
