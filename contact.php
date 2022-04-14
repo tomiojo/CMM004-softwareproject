@@ -62,6 +62,22 @@
                </form>
              </div>
             </div>
+            <script language="JavaScript">
+                    // Code for validating the form
+                    // Visit http://www.javascript-coder.com/html-form/javascript-form-validation.phtml
+                    // for details
+                    var frmvalidator  = new Validator("contactform");
+                    frmvalidator.addValidation("name","req","Please provide your name"); 
+                    frmvalidator.addValidation("email","req","Please provide your email"); 
+                    frmvalidator.addValidation("email","email","Please enter a valid email address"); 
+                    </script>
+                    <!--
+                    Sample code from:
+                    http://www.html-form-guide.com/contact-form/php-email-contact-form.html
+                    -->
+
+
+
              <!--<script src="scriptcontactform.js"></script>-->
 </main>
 <!--Start of Footer-->
