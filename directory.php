@@ -26,7 +26,7 @@ session_start();
         <a href="index.html">Home</a>
         <a href="directory.php">Directory</a>
         <a href="aboutus.html">Our team</a>
-        <a href="contact.php">Contact us</a>
+        <a href="contact_MAC.php">Contact us</a>
         <button class="button cart-button"> Sign up </button>
         <button class="button cart-button"> Login </button>
     </div>
