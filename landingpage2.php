@@ -61,7 +61,7 @@ session_start();
                           <option value="Barber">Barber</option>
                           <option value="Groceries">Groceries</option>
                           <option value="Healthcare">Healthcare</option>
-                          <option value="Gadget Store">Gadgetstore</option>
+                          <option value="Gadget Store">Gadget Store</option>
                           <option value="Mechanic">Mechanic</option>
                           <option value="Charity Shop">Charity Shop</option>
                         </select>
