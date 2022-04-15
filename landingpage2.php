@@ -32,7 +32,7 @@ session_start();
                     <button> Sign up </button>   
                 </a>
                 <a href="logout.php">
-                <button> logout </button>
+                <button> Logout </button>
                 </a>
 
             </div>
@@ -47,13 +47,13 @@ session_start();
             <form action ='marvel.php'method= 'Post'>
                  <!--Link your php here-->
                    <h3>Business Name </h3>
-                <Input type='text' name='business_name' placeholder="Business name">
+                <Input type='text' name='business_name' placeholder="Business name" required>
                     <h3>Email Address</h3>
-                <Input type='text' name='email' placeholder="johndoe@email.com">
+                <Input type='email' name='email' placeholder="johndoe@email.com" required>
                     <h3>Business Address </h3>
-                <Input type='text' name='address' placeholder="Address">
+                <Input type='text' name='address' placeholder="Address" required>
                     <h3>Postal Code </h3>
-                    <Input type='text' name='postal_code' placeholder="Postal code">
+                    <Input type='text' name='postal_code' placeholder="Postal code" required>
                         <br><br>
                         <h3>Choose your business Category </h3>
                         <label form="Category"></label>
@@ -66,7 +66,7 @@ session_start();
                           <option value="Charity shop">Charity Shop</option>
                         </select>
                     <h3>Telephone number</h3>
-                <Input type='text' name='telephone' placeholder="Telephone">
+                <Input type='text' name='telephone' placeholder="Telephone" required>
                     <h3>Website</h3>
                 <Input type='text' name='website' placeholder="www.website.com">
                     <br><br>
