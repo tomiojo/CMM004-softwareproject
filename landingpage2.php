@@ -63,7 +63,7 @@ session_start();
                           <option value="Healthcare">Healthcare</option>
                           <option value="Gadget Store">Gadgetstore</option>
                           <option value="Mechanic">Mechanic</option>
-                          <option value="Charity shop">Charity Shop</option>
+                          <option value="Charity Shop">Charity Shop</option>
                         </select>
                     <h3>Telephone number</h3>
                 <Input type='text' name='telephone' placeholder="Telephone" required>
