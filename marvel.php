@@ -13,6 +13,7 @@
 	$stmt->bind_param("sssssss", $business_name, $email, $address, $postal_code, $business_category, $telephone, $website);
 	$execval = $stmt->execute();
 	echo "Registration successfully...";
+	header ("Location: landingpage2.php");
 	$stmt->close();
 	$con->close();
 	
