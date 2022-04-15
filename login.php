@@ -57,9 +57,9 @@ session_start();
         <h1> Login Here </h1>
             <form action ='login.php'method= 'Post'>
                 <h3>Email Address</h3>
-                <Input type='email' name='email' placeholder="johndoe@email.com">
+                <Input type='email' name='email' placeholder="johndoe@email.com" required>
                     <h3>Password</h3>
-                <Input type='password' name='password' placeholder="Password">
+                <Input type='password' name='password' placeholder="Password" required>
                     <br><br>
                     <button type="submit"> Login </button>
                 </div>
